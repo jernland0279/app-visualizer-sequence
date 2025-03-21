@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Hero from '../components/Hero';
 import TrainingCard from '../components/TrainingCard';
@@ -48,7 +47,7 @@ const Index = () => {
           </div>
 
           <div className="mt-12 text-center">
-            <a href="/formation" className="btn-primary inline-flex items-center gap-2">
+            <a href="/formation" className="btn-primary inline-flex items-center gap-2 rounded-full">
               <span>Voir tout</span>
               <ChevronRight className="h-4 w-4" />
             </a>
@@ -57,22 +56,22 @@ const Index = () => {
       </section>
 
       {/* Formats de livraison */}
-      <section className="section-padding bg-accent">
+      <section className="section-padding bg-gradient-to-br from-accent to-white">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="rounded-lg overflow-hidden shadow-custom">
+            <div className="rounded-xl overflow-hidden shadow-xl">
               <img 
                 src="/lovable-uploads/2290727d-3e2d-4640-9710-f7317175aa16.png" 
                 alt="Formats de livraison des formations" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
             <div>
-              <h2 className="text-3xl font-bold mb-6 font-heading">Formats de livraison des formations</h2>
-              <p className="text-gray-600 mb-8">
+              <h2 className="text-3xl font-bold mb-6 font-heading text-gray-800">Formats de livraison des formations</h2>
+              <p className="text-gray-600 mb-8 leading-relaxed">
                 PECB demeure soucieuse de reconnaître cette multitude de types d'apprenants et de les aider tous à améliorer leurs compétences et à se développer professionnellement et intellectuellement. Pour y parvenir et faire en sorte que l'apprentissage soit enrichissant, PECB dispose d'options qui répondent facilement et efficacement aux besoins et aux préférences de chaque apprenant.
               </p>
-              <a href="/delivery-formats" className="btn-primary inline-flex items-center gap-2">
+              <a href="/delivery-formats" className="btn-primary inline-flex items-center gap-2 rounded-full">
                 <span>En savoir plus</span>
                 <ChevronRight className="h-4 w-4" />
               </a>
@@ -107,7 +106,7 @@ const Index = () => {
             />
           </div>
 
-          <div className="bg-accent p-8 rounded-lg shadow-sm">
+          <div className="bg-gray-50 p-8 rounded-xl shadow-md">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               <div className="col-span-1 md:col-span-4 text-lg font-bold mb-4 font-heading">
                 Calendrier des formations
@@ -143,7 +142,7 @@ const Index = () => {
       </section>
 
       {/* Processus de certification */}
-      <section className="section-padding bg-accent">
+      <section className="section-padding bg-gradient-to-br from-white to-accent">
         <div className="container-custom">
           <h2 className="section-title">Processus de <span className="text-primary">certification</span></h2>
           
@@ -201,7 +200,7 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="section-padding bg-primary text-white">
+      <section className="section-padding bg-gradient-to-r from-primary to-primary-hover text-white">
         <div className="container-custom">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 font-heading text-white">Présents dans le monde entier</h2>
           

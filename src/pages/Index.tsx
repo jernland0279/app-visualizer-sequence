@@ -6,11 +6,11 @@ import CourseCard from '../components/CourseCard';
 import ArticleCard from '../components/ArticleCard';
 import ProcessStep from '../components/ProcessStep';
 import StatBlock from '../components/StatBlock';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, Search } from 'lucide-react';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen">
       {/* Hero Section */}
       <Hero />
 
@@ -18,15 +18,15 @@ const Index = () => {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <h2 className="section-title">Formations</h2>
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <p className="text-gray-600">
+          <div className="section-subtitle">
+            <p>
               Avec les formations de PECB, la seule limite aux opportunités est votre imagination. 
               Quel que soit votre domaine d'expertise, PECB propose des formations qui répondent à vos besoins 
               et reflètent les dernières normes, technologies, approches, méthodes innovantes et exemples pratiques.
             </p>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-8">
             <TrainingCard 
               title="ISO/IEC 27001 Information Security Management Systems" 
               description="La certification ISO/IEC 27001 démontre votre engagement à aider les organismes à gérer l'information de manière sûre et efficace."
@@ -47,32 +47,34 @@ const Index = () => {
             />
           </div>
 
-          <div className="mt-10 text-center">
-            <a href="/formation" className="btn-primary">
-              Voir tout
+          <div className="mt-12 text-center">
+            <a href="/formation" className="btn-primary inline-flex items-center gap-2">
+              <span>Voir tout</span>
+              <ChevronRight className="h-4 w-4" />
             </a>
           </div>
         </div>
       </section>
 
       {/* Formats de livraison */}
-      <section className="section-padding bg-gray-50">
+      <section className="section-padding bg-accent">
         <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="rounded-lg overflow-hidden shadow-custom">
               <img 
                 src="/lovable-uploads/2290727d-3e2d-4640-9710-f7317175aa16.png" 
                 alt="Formats de livraison des formations" 
-                className="rounded-lg shadow-md w-full"
+                className="w-full h-full object-cover"
               />
             </div>
             <div>
-              <h2 className="text-3xl font-semibold mb-4">Formats de livraison des formations</h2>
-              <p className="text-gray-600 mb-6">
+              <h2 className="text-3xl font-bold mb-6 font-heading">Formats de livraison des formations</h2>
+              <p className="text-gray-600 mb-8">
                 PECB demeure soucieuse de reconnaître cette multitude de types d'apprenants et de les aider tous à améliorer leurs compétences et à se développer professionnellement et intellectuellement. Pour y parvenir et faire en sorte que l'apprentissage soit enrichissant, PECB dispose d'options qui répondent facilement et efficacement aux besoins et aux préférences de chaque apprenant.
               </p>
-              <a href="/delivery-formats" className="btn-primary">
-                En savoir plus
+              <a href="/delivery-formats" className="btn-primary inline-flex items-center gap-2">
+                <span>En savoir plus</span>
+                <ChevronRight className="h-4 w-4" />
               </a>
             </div>
           </div>
@@ -82,9 +84,9 @@ const Index = () => {
       {/* Assistez aux formations partout dans le monde */}
       <section className="section-padding bg-white">
         <div className="container-custom">
-          <h2 className="section-title">Assistez aux formations <span className="font-bold">partout dans le monde</span></h2>
+          <h2 className="section-title">Assistez aux formations <span className="text-primary">partout dans le monde</span></h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <CourseCard 
               title="ISO 9001 Lead Auditor"
               location="Saudi Arabia"
@@ -105,32 +107,35 @@ const Index = () => {
             />
           </div>
 
-          <div className="bg-gray-100 p-6 rounded-lg">
+          <div className="bg-accent p-8 rounded-lg shadow-sm">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-              <div className="col-span-1 md:col-span-4 text-lg font-medium mb-2">
+              <div className="col-span-1 md:col-span-4 text-lg font-bold mb-4 font-heading">
                 Calendrier des formations
               </div>
               <div>
-                <select className="w-full p-2 border border-gray-300 rounded">
+                <select className="w-full p-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
                   <option>Sélectionnez une formation</option>
                 </select>
               </div>
               <div>
-                <select className="w-full p-2 border border-gray-300 rounded">
+                <select className="w-full p-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
                   <option>Sélectionnez un pays</option>
                 </select>
               </div>
               <div>
-                <input type="text" placeholder="Ville" className="w-full p-2 border border-gray-300 rounded" />
+                <input type="text" placeholder="Ville" className="w-full p-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" />
               </div>
               <div>
-                <button className="w-full btn-primary">Rechercher</button>
+                <button className="w-full btn-primary flex items-center justify-center gap-2">
+                  <Search className="h-4 w-4" />
+                  <span>Rechercher</span>
+                </button>
               </div>
             </div>
             <div className="mt-4 text-right">
-              <a href="/sessions" className="text-primary hover:text-primary-hover flex items-center justify-end">
+              <a href="/sessions" className="text-primary hover:text-primary-hover flex items-center justify-end gap-1 font-medium">
                 <span>Voir les sessions offertes</span>
-                <ChevronRight className="h-4 w-4 ml-1" />
+                <ChevronRight className="h-4 w-4" />
               </a>
             </div>
           </div>
@@ -138,9 +143,9 @@ const Index = () => {
       </section>
 
       {/* Processus de certification */}
-      <section className="section-padding bg-gray-50">
+      <section className="section-padding bg-accent">
         <div className="container-custom">
-          <h2 className="section-title">Processus de <span className="font-bold">certification</span></h2>
+          <h2 className="section-title">Processus de <span className="text-primary">certification</span></h2>
           
           <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
             <ProcessStep 
@@ -168,7 +173,7 @@ const Index = () => {
         <div className="container-custom">
           <h2 className="section-title">Aperçu</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <ArticleCard 
               category="Articles"
               title="How ISO Certifications Help You Achieve Digital Trust"
@@ -196,11 +201,11 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="section-padding bg-gray-100">
+      <section className="section-padding bg-primary text-white">
         <div className="container-custom">
-          <h2 className="section-title mb-12">Présents dans le monde entier</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 font-heading text-white">Présents dans le monde entier</h2>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <StatBlock value="150+" label="Pays" />
             <StatBlock value="2600+" label="Partenaires" />
             <StatBlock value="2400+" label="Formateurs" />

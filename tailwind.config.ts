@@ -26,12 +26,12 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: '#a51c30',
+					DEFAULT: '#1c4a96', // Changed to blue
 					foreground: '#FFFFFF',
-					hover: '#8a1728'
+					hover: '#153674'
 				},
 				secondary: {
-					DEFAULT: '#f5f5f5',
+					DEFAULT: '#f8f9fa',
 					foreground: '#333333'
 				},
 				destructive: {
@@ -43,8 +43,8 @@ export default {
 					foreground: 'hsl(var(--muted-foreground))'
 				},
 				accent: {
-					DEFAULT: 'hsl(var(--accent))',
-					foreground: 'hsl(var(--accent-foreground))'
+					DEFAULT: '#e9f0f9', // Light blue accent
+					foreground: '#1c4a96'
 				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
@@ -59,6 +59,13 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				heading: ['Nunito', 'sans-serif'],
+			},
+			boxShadow: {
+				'custom': '0 4px 20px rgba(0, 0, 0, 0.08)',
 			},
 			keyframes: {
 				'accordion-down': {

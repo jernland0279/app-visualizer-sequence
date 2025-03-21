@@ -10,7 +10,7 @@ interface ProcessStepProps {
 const ProcessStep: React.FC<ProcessStepProps> = ({ title, isLast = false }) => {
   return (
     <div className="relative flex flex-col items-center">
-      <div className="bg-white border border-gray-200 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 text-center h-full w-full flex items-center justify-center">
+      <div className="bg-white border border-gray-100 p-6 rounded-lg shadow-custom hover:shadow-lg transition-shadow duration-300 text-center h-full w-full flex items-center justify-center">
         <h3 className="font-medium text-center">{title}</h3>
       </div>
       {!isLast && (
